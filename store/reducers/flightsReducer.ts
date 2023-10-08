@@ -13,7 +13,10 @@ let flightsInitValue: TicketProps = {
   arrivalDate: "",
 }
 
-const stored = localStorage.getItem("flightData")
+let stored: string | null = '' 
+if(localStorage){
+  stored = localStorage.getItem("flightData")
+}
 if (stored) {
   flightsInitValue = JSON.parse(stored)
 }
