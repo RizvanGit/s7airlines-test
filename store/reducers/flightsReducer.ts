@@ -13,12 +13,12 @@ let flightsInitValue: TicketProps = {
   arrivalDate: "",
 }
 
-let stored: string | null = '' 
-if(localStorage){
+if(typeof window !== "undefined"){
+  let stored: string | null = '' 
   stored = localStorage.getItem("flightData")
-}
-if (stored) {
-  flightsInitValue = JSON.parse(stored)
+  if (stored) {
+    flightsInitValue = JSON.parse(stored)
+  }
 }
 
 const initialState: FlightsState = {
@@ -30,7 +30,9 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     setFlights: (state, action: PayloadAction<TicketProps>) => {
-      localStorage.setItem("flightData", JSON.stringify(action.payload))
+      if(typeof window !== "undefined"){
+        localStorage.setItem("flightData", JSON.stringify(action.payload))
+      }
       state.flights = {
         fromCity: action.payload.fromCity,
         toCity: action.payload.toCity,
