@@ -24,7 +24,7 @@ const Header = () => {
           </li>
           <li>
             <Button asChild>
-              <Link href="/">GitHub</Link>
+              <Link href="https://github.com/RizvanGit/s7airlines-test">GitHub</Link>
             </Button>
           </li>
         </ul>
