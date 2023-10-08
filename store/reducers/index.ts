@@ -1,7 +1,3 @@
-import flightsReducer, {setFlights} from './flightsReducer'
+import flightsReducer, { setFlights } from "./flightsReducer"
 
-export {
-  flightsReducer,
-  setFlights
-}
-
+export { flightsReducer, setFlights }

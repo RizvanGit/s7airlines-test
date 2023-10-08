@@ -1,0 +1,7 @@
+build
+coverage
+
+*.config.ts
+*.config.js
+*.json
+

@@ -1,22 +1,20 @@
-
-import { TicketProps } from '@/types'
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { TicketProps } from "@/types"
+import { createSlice } from "@reduxjs/toolkit"
+import type { PayloadAction } from "@reduxjs/toolkit"
 
 export interface FlightsState {
   flights: TicketProps
 }
 
-
 let flightsInitValue: TicketProps = {
-  fromCity: '',
-  toCity: '',
-  flyoutDate: '',
-  arrivalDate: '',
+  fromCity: "",
+  toCity: "",
+  flyoutDate: "",
+  arrivalDate: "",
 }
 
-const stored = localStorage.getItem('flightData')
-if(stored){
+const stored = localStorage.getItem("flightData")
+if (stored) {
   flightsInitValue = JSON.parse(stored)
 }
 
@@ -25,16 +23,16 @@ const initialState: FlightsState = {
 }
 
 export const counterSlice = createSlice({
-  name: 'flights',
+  name: "flights",
   initialState,
   reducers: {
     setFlights: (state, action: PayloadAction<TicketProps>) => {
-      localStorage.setItem('flightData', JSON.stringify(action.payload))
+      localStorage.setItem("flightData", JSON.stringify(action.payload))
       state.flights = {
         fromCity: action.payload.fromCity,
         toCity: action.payload.toCity,
         flyoutDate: action.payload.flyoutDate,
-        arrivalDate: action.payload.arrivalDate
+        arrivalDate: action.payload.arrivalDate,
       }
     },
   },

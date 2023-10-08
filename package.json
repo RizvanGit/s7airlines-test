@@ -19,6 +19,7 @@
     "date-fns": "^2.30.0",
     "keen-slider": "^6.8.6",
     "next": "13.5.4",
+    "prettier": "^3.0.3",
     "react": "^18",
     "react-day-picker": "^8.8.2",
     "react-dom": "^18",

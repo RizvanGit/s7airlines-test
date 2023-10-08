@@ -5,13 +5,10 @@ import { PropsWithChildren } from "react"
 
 type ProviderProps = PropsWithChildren
 
-export default function Providers({children}: PropsWithChildren) {
-
+export default function Providers({ children }: PropsWithChildren) {
   return (
     <>
-      <StoreProvider>
-        {children}
-      </StoreProvider>
+      <StoreProvider>{children}</StoreProvider>
     </>
   )
 }

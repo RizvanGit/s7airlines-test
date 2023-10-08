@@ -1,14 +1,8 @@
-import {store} from './store'
-import StoreProvider from './StoreProvider'
+import { store } from "./store"
+import StoreProvider from "./StoreProvider"
 
-import type { RootState, AppDispatch } from './store'
+import type { RootState, AppDispatch } from "./store"
 
-export {
-  store,
-  StoreProvider
-}
+export { store, StoreProvider }
 
-export type {
-  RootState,
-  AppDispatch
-}
+export type { RootState, AppDispatch }

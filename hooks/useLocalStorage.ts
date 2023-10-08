@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 export default function useLocalStorage<T>(key: string, fallbackValue: T) {
   const [value, setValue] = useState<T>(fallbackValue)
@@ -6,7 +6,6 @@ export default function useLocalStorage<T>(key: string, fallbackValue: T) {
   useEffect(() => {
     const stored = localStorage.getItem(key)
     setValue(stored ? JSON.parse(stored) : fallbackValue)
-    
   }, [fallbackValue, key])
 
   useEffect(() => {

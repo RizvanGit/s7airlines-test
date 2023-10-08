@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import {flightsReducer} from "./reducers";
+import { configureStore } from "@reduxjs/toolkit"
+import { flightsReducer } from "./reducers"
 
 export const store = configureStore({
   reducer: {
-    flights: flightsReducer
-  }
+    flights: flightsReducer,
+  },
 })
 
 export type RootState = ReturnType<typeof store.getState>
