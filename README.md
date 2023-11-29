@@ -1,5 +1,6 @@
 ## S7 Airline Test
-*ТЕСТОВОЕ ЗАДАНИЕ КОМПАНИИ
+*тестовое задание компании
+<br/>
 Deploy:
 <a href="https://s7airlines-test-h2en.vercel.app/">s7 airline</a>
 
